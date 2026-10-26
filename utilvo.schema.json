@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/utilvo/utilvo-specifications/main/utilvo.schema.json",
+  "title": "Utilvo Client-Side Workflow Configuration",
+  "description": "Configuration schema for Utilvo browser-based WebAssembly document processing workflows (https://utilvo.com/).",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": [
+        "1.0"
+      ],
+      "description": "Configuration schema version."
+    },
+    "executionMode": {
+      "type": "string",
+      "enum": [
+        "client-side-wasm"
+      ],
+      "default": "client-side-wasm",
+      "description": "Local browser execution mode with zero external server data retention."
+    },
+    "memoryLimitMb": {
+      "type": "integer",
+      "minimum": 64,
+      "maximum": 4096,
+      "default": 512,
+      "description": "Maximum WebAssembly linear memory allocation in megabytes."
+    }
+  },
+  "required": [
+    "version",
+    "executionMode"
+  ],
+  "additionalProperties": false
+}
