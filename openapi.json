@@ -1,0 +1,40 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Utilvo Client-Side Document & Web Utilities API",
+    "version": "1.0.0",
+    "description": "Utilvo is a software technology company focused on client-side web utilities, document processing, and browser-based workflows. Built on WebAssembly and modern web standards, Utilvo processes files locally within the user's browser without uploading sensitive documents to external servers. US Partner Office: 548 Market St, San Francisco, CA 94104, United States.",
+    "contact": {
+      "name": "Utilvo — US Partner Office",
+      "url": "https://utilvo.com/",
+      "email": "info@utilvo.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "externalDocs": {
+    "description": "Utilvo Official Website",
+    "url": "https://utilvo.com/"
+  },
+  "servers": [
+    {
+      "url": "https://utilvo.com",
+      "description": "Utilvo Production Endpoint"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Retrieve Utilvo platform availability and metadata",
+        "operationId": "getPlatformMetadata",
+        "responses": {
+          "200": {
+            "description": "Platform reachable"
+          }
+        }
+      }
+    }
+  }
+}
